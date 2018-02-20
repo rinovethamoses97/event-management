@@ -1,0 +1,12 @@
+/*Background*/
+#back{
+	margin:0;
+	overflow: hidden;
+	width:100%;
+	position: relative;
+	top:0;
+	left:0;
+	right:0;
+	height:730px;
+}
+

@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> Admin Login</title>
+<link rel="icon" type="image/png" href="logo1.png"/>
+<style>
+div {
+    background-color: #ffffff;
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 25px;
+	margin-left: 480px;
+	margin-top: 150px;
+	border-radius: 4px;
+
+}
+body {
+font-weight: bold;
+font-family: Georgia;
+background: url(http://tub.tubgit.com/reimg/resize-img.php?src=http://tub.tubgit.com/images250/tx20qhvmuhq.jpg&h=450&w=728);
+background-repeat: no-repeat;
+ background-size:100%;
+ color: blue;
+}
+input[type=text] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	}
+	input[type=submit], input[type=button] {
+	display: inline;
+    background-color: #217AD3;
+    color: white;
+   padding: 14px 20px;
+   margin: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    left: 50px;
+   
+}
+
+input[type=submit]:hover {
+		background-color: #02036b;
+		
+		}
+		
+		
+		ul.breadcrumb {
+	margin-top: 10px;
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #000;
+    font-size: 17px;
+	
+}
+ul.breadcrumb li {
+	display: inline;
+	color: #b0c9ab;
+	}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #1c8704;
+    content: ">";
+	font-weight: bold;
+	font-size: 20px;
+}
+ul.breadcrumb li a {
+    color: #fff;
+    text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+    color: #eee;
+    text-decoration: underline;
+	
+} 
+label {
+  clear: left;
+  }
+</style>
+</head>
+<body>
+<nav>
+<ul class="breadcrumb">
+  <li><a href="wp.php">Home</a></li>
+  <li><a href="admin.html">Admin login</a></li>
+  <li>Dashboard</li>
+  <li>View Participants</li>
+</ul>
+</nav>
+<div>
+<form action="show.php" method="post">
+Enter the event code:<input type="text" name="code" placeholder="Event code"/>
+<input type="submit" value="View"/>
+<input type="button" value="Cancel" onClick="back()"/><br/>
+<label>NOTE: Enter in block letters.</label>
+</form>
+</div>
+<script>
+function back()
+{
+  window.history.back();
+}
+</script>
+</body>
+</html>

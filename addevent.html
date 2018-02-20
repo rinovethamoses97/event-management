@@ -1,0 +1,131 @@
+
+<!DOCTYPE HTML><html>
+<head>
+<title>Add an event</title>
+<link rel="icon" type="image/png" href="logo1.png"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+body {
+font-weight: bold;
+font-family: Georgia;
+background: url(http://rostangaff.se/wp-content/uploads/2017/06/Flow-in-blue-and-green.jpg);
+background-repeat: no-repeat;
+ background-size: 100% 100%;
+}
+input[type=text],input[type=date],input[type=time] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	}
+input[type=submit], input[type=button] {
+		diplay: inline;
+		background-color: #217AD3;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 10px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		position: relative;
+        left: 190px;
+}
+input[type=submit]:hover {
+		background-color: #080059;
+		color: white;
+	}
+.form {
+padding-left: 300px;
+padding-right: 300px;
+}
+.image {
+  padding-left: 250px;
+  width: 200px;
+  height: 200px;
+  }
+  ul.breadcrumb {
+	margin-top: 10px;
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #000;
+    font-size: 17px;
+	
+}
+ul.breadcrumb li {
+	display: inline;
+	color: #b0c9ab;
+	}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #1c8704;
+    content: ">";
+	font-weight: bold;
+	font-size: 20px;
+}
+ul.breadcrumb li a {
+    color: #fff;
+    text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+    color: #eee;
+    text-decoration: underline;
+	
+} 
+
+  </style>
+</head>
+<body>
+<nav>
+<ul class="breadcrumb">
+  <li><a href="wp.php">Home</a></li>
+  <li><a href="admin.html">Admin login</a></li>
+  <li>Dashboard</li>
+  <li>Add events</li>
+</ul>
+</nav>
+<div class="image">
+<img src="http://www.celworking.com/wp-content/uploads/2015/05/events7-845x321.jpg" alt="events"/>
+</div>
+<div class="form">
+<form action="addevent.php" method="post">
+Date: <span style="color:red;">*</span><input type="date" name="date" id="fromdate"><br/>
+Time: <span style="color:red;">*</span><input type="time" name="time"><br/>
+Description: <span style="color:red;">*</span><input type="text" name="description" placeholder="About the event.." required/><br/>
+Location: <span style="color:red;">*</span><input type="text" name="location" placeholder="Where?" required/><br/>
+Incharge: <span style="color:red;">*</span><input type="text" name="incharge" placeholder="Faculty name" required/><br/>
+Hosting Department: <span style="color:red;">*</span><input type="text" name="hostingdepartment" placeholder="Department" required/><br/>
+About:<br/><textarea  name="about" placeholder="About" rows="10" cols="102"></textarea><br/>
+<input type="submit" value="Add Event"/>
+<input type="button" value="Cancel" onClick="back()"/><br/>
+
+</form>
+</div>
+<br/><label>All fields marked with asterisk(<span style="color:red;">*</span>) are required.</label>
+<script>
+function back()
+{
+  window.history.back();
+}
+
+$(document).ready(function()
+{
+	
+ var d = new Date();
+	a=d.getFullYear();
+	b=d.getMonth()+1;
+	c=d.getDate();
+	if(b<10)
+	 b="0"+b;
+	if(c<10)
+	 c="0"+c; 
+	var ans=a+"-"+b+"-"+c;
+	var fromdate=document.getElementById("fromdate");
+	fromdate.setAttribute("min",ans);
+	fromdate.setAttribute("value",ans);
+	
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> Admin Login</title>
+<link rel="icon" type="image/png" href="logo1.png"/>
+<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="main.js"></script>
+<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+body {
+font-weight: bold;
+font-family: Courier;
+background: url(http://www.intrawallpaper.com/static/images/Pattern-1920X1200-Wallpaper-Widescreen_318iyIu.jpg);
+background-repeat: no-repeat;
+ background-size:cover;
+}
+div {
+    background-color: #ffffff;
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 25px;
+	margin-left: 490px;
+	margin-top: 180px;
+	border-radius: 4px;
+
+}
+input[type=text],input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	}
+input[type=submit] {
+		width: 50%;
+		background-color: #217AD3;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		position: relative;
+        left: 70px;
+}
+input[type=submit]:hover {
+		background-color: #080059;
+		color: white;
+	}
+	ul.breadcrumb {
+	margin-top: 10px;
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #000;
+    font-size: 17px;
+	
+}
+ul.breadcrumb li {
+	display: inline;
+	color: #b0c9ab;
+	}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #1c8704;
+    content: ">";
+	font-weight: bold;
+	font-size: 20px;
+}
+ul.breadcrumb li a {
+    color: #fff;
+    text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+    color: #eee;
+    text-decoration: underline;
+	
+} 
+</style>
+</head>
+<body>
+<nav>
+<ul class="breadcrumb">
+  <li><a href="wp.php">Home</a></li>
+  <li>Admin login</li>
+</ul>
+</nav>
+	<div>
+		<center>LOGIN</center>
+		<form action="admin1.php" method="post">
+		USERNAME:<span style="color:red;">*</span><input type="text" name="username" placeholder="Username" required/>
+		<br/>
+		PASSWORD:<span style="color:red;">*</span><input type="password" name="password" placeholder="Password" required/>
+		<br/>
+		<input type="submit" class="btn"><br/>
+		<label>All fields marked with asterisk(<span style="color:red;">*</span>) are required.</label>
+	</div>
+</body>
+</html>
